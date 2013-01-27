@@ -1,0 +1,186 @@
+@import 'bourbon/bourbon';
+
+$button-color: #999999;
+$text-color: #ffffff;
+$font-size: 2.25em;
+
+@mixin buttonstyles ($button-color, $text-color) {
+	@include button($button-color);
+	color: $text-color;
+	font-size: 1.25em;
+	margin: 3px;
+}
+
+@mixin bigtext($font-size) {
+	font-size: $font-size;
+	color: white;
+	text-shadow: 0 0 0.2em #000000, 0 0 0.2em #000000;
+	text-align: center;	
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background: url("../images/background.jpg");
+	background-repeat: no-repeat;
+}
+
+.content {	
+	margin: 0.5em auto;
+	width: 90%;
+	height: 90%;
+}
+
+.header {
+	@include bigtext($font-size);
+	
+	.error-missing {
+		position: absolute;
+		left: 15%;
+		right: 15%;
+		top: 30%;
+		font-size: 2.25em;
+		color: $text-color;
+		text-decoration: none;
+		border-bottom: 2px solid $text-color;
+
+			&:hover {
+				border-bottom: 2px solid #333333;
+				text-shadow: #555555 0px 1px 2px;	
+			}
+	}
+}
+
+.result {
+	@include clearfix;
+	@include bigtext(1.5);
+
+	margin: auto;
+	top: 0;
+	
+	.movie-poster {
+		width: 300px;
+		height: 500px;
+		float: left;
+		padding: 0;
+		border: 1px solid white;
+		@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+		margin: 0.5em 1em;
+	}
+	
+	.title {
+
+		margin: 0 auto;
+		margin-left: 4em;
+		font-size: 4em;
+	}
+	
+	.movie-info {
+		text-align: left;
+		padding: 0 1em;
+		line-height: 2em;
+		margin: 0.5em 1em;
+		margin-right: 5em;
+		display: inline;
+		font-size: golden-ratio(16px, 1);
+		border-bottom: 2px solid white;
+		
+		li {
+			list-style-type: none;
+			display: inline;
+		}
+	}
+	
+	.overview {
+		height: 7.75em;
+		text-align: left;
+		font-size: golden-ratio(12px, 1);
+		margin: 0.5em 3em;
+		padding-left: 0;
+	}
+	
+	.movie-trailer {
+		margin-right: 8em;
+		margin-bottom: 2em;
+	}
+}
+
+.try-again {	
+	@include buttonstyles($text-color, black);
+	margin-left: 10em;
+	width: 40%;
+}
+
+.searchtag-wrapper {
+	margin: auto;	
+}
+
+.search {
+	text-align: center;
+	
+	.searchbutton {
+		@include buttonstyles($button-color, $text-color);
+		width: 12em;
+		padding: 10px;
+	}
+	
+	.searchbox {
+		width: 70%;
+		font-size: golden-ratio(14px, 1);
+		padding: 10px;
+	}
+}
+
+.tags {
+	text-align: center;
+	
+	.tag-button {
+		@include buttonstyles($button-color, $text-color);
+		font-size: golden-ratio(10px,  1);
+		width: 10em;
+	}
+	
+	p {
+		@include bigtext($font-size);
+	}
+}
+
+.footer {
+	@include bigtext(1.25em);
+	text-align: center;
+	color: white;
+	margin-top: 2.25em;
+
+	a {
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px solid white;
+		padding: 0;
+		
+		&:hover {
+			text-shadow: #aaaaaa 0px 1px 2px;		
+		}
+	}
+}
+
+.loader {
+	position: absolute;
+	top: 45%;
+	bottom:45%;
+	left: 48%;
+	right: 48%;
+	height: 200px;
+	width: 300px;
+}
+
+.error {
+	border: 1px solid white;
+	background: #aa0000;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+
+.hidden {
+	display: none;
+}

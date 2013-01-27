@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Find Me a Movie</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="description" content="Finds you movies. Pick your genre of choice and find recommendations instantly" />
+		
+		<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png" /> 
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/main.js"></script>
+		
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+		  	var _gaq = _gaq || [];
+		  	_gaq.push(['_setAccount', 'UA-37857532-1']);
+		  	_gaq.push(['_trackPageview']);
+
+		  	(function() {
+		    	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  		})();
+		</script>
+	</head>
+		
+	<body>
+		
+		<div class="container">
+		
+		<div class="content">
+			
+			<div class="header">
+				
+				<h1 class="headline"> Find Me a Movie </h1>
+				
+			</div>
+			
+			<div class="searchtag-wrapper">
+			
+				<div class="search">
+
+					<form name="search" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+
+						<input type="text" class="searchbox" name="searchbox" placeholder="Pick a genre..." readonly="readonly">
+
+						<input type="button" name="searchbutton" class="searchbutton" value="Find Me a Movie">
+
+					</form>
+
+				</div>
+
+				<div class="tags">
+					
+					<p class="pick-genre"> Pick the genre of movie you'd like us to find </p>
+					<p class="error hidden"> You must pick a genre before we can find you a movie </p>
+					
+
+					<br />
+
+					<input type="button" class="tag-button" name="28" value="Action">
+					<input type="button" class="tag-button" name="12" value="Adventure">
+					<input type="button" class="tag-button" name="16" value="Animation">
+					<input type="button" class="tag-button" name="35" value="Comedy">
+					<input type="button" class="tag-button" name="80" value="Crime">
+
+					<br />
+
+					<input type="button" class="tag-button" name="99" value="Documentary">
+					<input type="button" class="tag-button" name="18" value="Drama">
+					<input type="button" class="tag-button" name="10751" value="Family">
+					<input type="button" class="tag-button" name="14" value="Fantasy">
+					<input type="button" class="tag-button" name="10769" value="Foreign">
+
+					<br />
+
+					<input type="button" class="tag-button" name="36" value="History">
+					<input type="button" class="tag-button" name="27" value="Horror">
+					<input type="button" class="tag-button" name="10756" value="Indie">
+					<input type="button" class="tag-button" name="10402" value="Music">
+					<input type="button" class="tag-button" name="9648" value="Mystery">
+					
+
+					<br />
+
+					<input type="button" class="tag-button" name="10749" value="Romance">
+					<input type="button" class="tag-button" name="878" value="Science Fiction">
+					<input type="button" class="tag-button" name="53" value="Thriller">
+					<input type="button" class="tag-button" name="10752" value="War">
+					<input type="button" class="tag-button" name="37" value="Western">
+
+				</div>
+			
+			</div>
+			
+			</div>
+			
+			<div class="result hidden">
+					<h1 class="title"></h1>
+					<a href="" class="poster-link"><img class="movie-poster" src="/" alt=""></a>
+						
+					<ol class="movie-info">
+						<li><span class="release-date"></span></li>
+						<li><span class="running-time"></span></li>
+					</ol>
+					
+					<div class="overview"></div>
+					
+					<div class="movie-trailer"></div> 
+
+					<input type="button" class="try-again" name="10749" value="Already seen it? Find another movie">
+							
+			</div>
+
+			<div class="footer">
+			
+				<span>Made by <a href="http://www.joncordeiro.com">Jon Cordeiro</a></span>
+			
+			</div>
+			
+			</div>
+
+	</body>
+
+</html>
