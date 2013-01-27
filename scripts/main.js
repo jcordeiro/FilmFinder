@@ -51,7 +51,7 @@ $(document).ready(function() {
 	// Populates the page with the results from the random movie search
 	var updatePage = function(movie) {
 
-			var url = "http://private-c8cc-themoviedb.apiary.io/3/movie/" + movie.id;
+			var url = "http://api.themoviedb.org/3/movie/" + movie.id;
 
 			$(".title").html(movie.title);
 			$(".movie-poster").attr("src", "http://cf2.imgobject.com/t/p/original/" + movie.poster_path);
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
 			var nbrOfPages;
 			var movielist = [];
-			var url = "http://private-c8cc-themoviedb.apiary.io/3/genre/" + genre + "/movies?api_key=" + tmdb_apikey;
+			var url = "http://api.themoviedb.org/3/genre/" + genre + "/movies?api_key=" + tmdb_apikey;
 			var dataLength;
 
 			// Run an initial ajax request to get the number of pages and the length of the results
