@@ -1,10 +1,8 @@
 @import 'bourbon/bourbon';
 
-<<<<<<< HEAD
 $button-color: #DE341D;
-=======
+
 $button-color: #999999;
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 $text-color: #ffffff;
 $font-size: 2.25em;
 
@@ -12,12 +10,12 @@ $font-size: 2.25em;
 	@include button($button-color);
 	color: $text-color;
 	font-size: 1.25em;
-<<<<<<< HEAD
+
 	margin: 5px;
 	padding: 10px;
-=======
+
 	margin: 3px;
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
+
 }
 
 @mixin bigtext($font-size) {
@@ -29,7 +27,7 @@ $font-size: 2.25em;
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
-<<<<<<< HEAD
+
 
 	background: url("../images/billie_holiday.png");
 	
@@ -39,15 +37,15 @@ body {
 	
 //background: yellow;
 	
-=======
+
 	background: url("../images/background.jpg");
 	background-repeat: no-repeat;
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
+
 }
 
 .content {	
 	margin: 0.5em auto;
-<<<<<<< HEAD
+
 	margin-bottom: -3em	;
 	padding-bottom: 0;
 	width: 75%;
@@ -66,7 +64,7 @@ body {
 
 .header {
 	@include bigtext($font-size);
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
+
 	
 	.error-missing {
 		position: absolute;
@@ -83,7 +81,7 @@ body {
 				text-shadow: #555555 0px 1px 2px;	
 			}
 	}
-<<<<<<< HEAD
+
 	
 	.headline {
 			border-bottom: 2px groove #DE341D;
@@ -122,14 +120,13 @@ body {
 	@include buttonstyles($button-color, $text-color);
 	font-size: golden-ratio(10px,  1);
 	width: 22em;
-=======
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
+
 }
 
 .result {
 	@include clearfix;
 	@include bigtext(1.5);
-<<<<<<< HEAD
+
 	
 	width: 75%;
 	
@@ -140,7 +137,7 @@ body {
 	.movie-poster {
 		width: 300px;
 		height: 450px;
-=======
+
 
 	margin: auto;
 	top: 0;
@@ -148,17 +145,14 @@ body {
 	.movie-poster {
 		width: 300px;
 		height: 500px;
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 		float: left;
 		padding: 0;
 		border: 1px solid white;
 		@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
 		margin: 0.5em 1em;
-<<<<<<< HEAD
 
 	}
 	
-=======
 	}
 	
 	.title {
@@ -167,15 +161,12 @@ body {
 		margin-left: 4em;
 		font-size: 4em;
 	}
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
+
 	
 	.movie-info {
 		text-align: left;
 		padding: 0 1em;
 		line-height: 2em;
-<<<<<<< HEAD
-	//	margin: -0.5em 5em 0.5em 1em;
-	//	margin-right: 5em;
 		margin-top: 0.35em;
 		margin-right: 5em;
 				margin-left: 1em;
@@ -187,20 +178,16 @@ body {
 			color: #DE341D;
 		}
 		
-	//	float: right;
-=======
 		margin: 0.5em 1em;
 		margin-right: 5em;
 		display: inline;
 		font-size: golden-ratio(16px, 1);
 		border-bottom: 2px solid white;
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 		
 		li {
 			list-style-type: none;
 			display: inline;
 		}
-<<<<<<< HEAD
 		
 	//	background: purple;
 	}
@@ -215,24 +202,12 @@ body {
 		padding: 5px;
 		
 		border-top: 2px groove #DE341D;
-	//	border-bottom: 2px groove #DE341D;
-		
-	//	margin-right: -0.25em;
-/*	/	margin-top: 2.5em;*/
-	//	margin: 0.5em 5em 0.5em 15em;
-	//	padding-left: 0;
-	
-//	display: inline-block;
-	
-/*	/	float: right;*/
-		
-//		background: orange;
+
 	}
 	
 	.movie-trailer {
 		float: right;
-		
-	//	margin-top: -3.5em;
+
 	margin-top: 0;
 		margin-right: 0.5em;
 
@@ -241,13 +216,12 @@ body {
 	}
 	
 	
-//	background: blue;
+
 }
 
 .result-container {
 			@include clearfix;
-//	background: red;
-=======
+
 	}
 	
 	.overview {
@@ -262,17 +236,14 @@ body {
 		margin-right: 8em;
 		margin-bottom: 2em;
 	}
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
+
 }
 
 .try-again {	
 	@include buttonstyles($text-color, black);
-<<<<<<< HEAD
 	margin-left: 0em;
 	float: left;
-=======
 	margin-left: 10em;
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 	width: 40%;
 }
 
@@ -303,20 +274,12 @@ body {
 		@include buttonstyles($button-color, $text-color);
 		font-size: golden-ratio(10px,  1);
 		width: 10em;
-<<<<<<< HEAD
-
-=======
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 	}
 	
 	p {
 		@include bigtext($font-size);
 	}
 }
-
-<<<<<<< HEAD
-
-
 .footer {
 	font-size: 1.25em;
 
@@ -341,7 +304,6 @@ body {
 	} 
 	
 //	background: green;
-=======
 .footer {
 	@include bigtext(1.25em);
 	text-align: center;
@@ -358,7 +320,6 @@ body {
 			text-shadow: #aaaaaa 0px 1px 2px;		
 		}
 	}
->>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 }
 
 .loader {
