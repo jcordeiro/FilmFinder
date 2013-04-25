@@ -1,6 +1,10 @@
 @import 'bourbon/bourbon';
 
+<<<<<<< HEAD
 $button-color: #DE341D;
+=======
+$button-color: #999999;
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 $text-color: #ffffff;
 $font-size: 2.25em;
 
@@ -8,8 +12,12 @@ $font-size: 2.25em;
 	@include button($button-color);
 	color: $text-color;
 	font-size: 1.25em;
+<<<<<<< HEAD
 	margin: 5px;
 	padding: 10px;
+=======
+	margin: 3px;
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 }
 
 @mixin bigtext($font-size) {
@@ -21,6 +29,7 @@ $font-size: 2.25em;
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
+<<<<<<< HEAD
 
 	background: url("../images/billie_holiday.png");
 	
@@ -30,10 +39,15 @@ body {
 	
 //background: yellow;
 	
+=======
+	background: url("../images/background.jpg");
+	background-repeat: no-repeat;
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 }
 
 .content {	
 	margin: 0.5em auto;
+<<<<<<< HEAD
 	margin-bottom: -3em	;
 	padding-bottom: 0;
 	width: 75%;
@@ -45,6 +59,14 @@ body {
 .header {
 	@include bigtext($font-size + 0.25em);
 	
+=======
+	width: 90%;
+	height: 90%;
+}
+
+.header {
+	@include bigtext($font-size);
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 	
 	.error-missing {
 		position: absolute;
@@ -61,6 +83,7 @@ body {
 				text-shadow: #555555 0px 1px 2px;	
 			}
 	}
+<<<<<<< HEAD
 	
 	.headline {
 			border-bottom: 2px groove #DE341D;
@@ -99,11 +122,14 @@ body {
 	@include buttonstyles($button-color, $text-color);
 	font-size: golden-ratio(10px,  1);
 	width: 22em;
+=======
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 }
 
 .result {
 	@include clearfix;
 	@include bigtext(1.5);
+<<<<<<< HEAD
 	
 	width: 75%;
 	
@@ -114,19 +140,40 @@ body {
 	.movie-poster {
 		width: 300px;
 		height: 450px;
+=======
+
+	margin: auto;
+	top: 0;
+	
+	.movie-poster {
+		width: 300px;
+		height: 500px;
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 		float: left;
 		padding: 0;
 		border: 1px solid white;
 		@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
 		margin: 0.5em 1em;
+<<<<<<< HEAD
 
 	}
 	
+=======
+	}
+	
+	.title {
+
+		margin: 0 auto;
+		margin-left: 4em;
+		font-size: 4em;
+	}
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 	
 	.movie-info {
 		text-align: left;
 		padding: 0 1em;
 		line-height: 2em;
+<<<<<<< HEAD
 	//	margin: -0.5em 5em 0.5em 1em;
 	//	margin-right: 5em;
 		margin-top: 0.35em;
@@ -141,11 +188,19 @@ body {
 		}
 		
 	//	float: right;
+=======
+		margin: 0.5em 1em;
+		margin-right: 5em;
+		display: inline;
+		font-size: golden-ratio(16px, 1);
+		border-bottom: 2px solid white;
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 		
 		li {
 			list-style-type: none;
 			display: inline;
 		}
+<<<<<<< HEAD
 		
 	//	background: purple;
 	}
@@ -192,12 +247,32 @@ body {
 .result-container {
 			@include clearfix;
 //	background: red;
+=======
+	}
+	
+	.overview {
+		height: 7.75em;
+		text-align: left;
+		font-size: golden-ratio(12px, 1);
+		margin: 0.5em 3em;
+		padding-left: 0;
+	}
+	
+	.movie-trailer {
+		margin-right: 8em;
+		margin-bottom: 2em;
+	}
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 }
 
 .try-again {	
 	@include buttonstyles($text-color, black);
+<<<<<<< HEAD
 	margin-left: 0em;
 	float: left;
+=======
+	margin-left: 10em;
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 	width: 40%;
 }
 
@@ -228,7 +303,10 @@ body {
 		@include buttonstyles($button-color, $text-color);
 		font-size: golden-ratio(10px,  1);
 		width: 10em;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 	}
 	
 	p {
@@ -236,6 +314,7 @@ body {
 	}
 }
 
+<<<<<<< HEAD
 
 
 .footer {
@@ -262,6 +341,24 @@ body {
 	} 
 	
 //	background: green;
+=======
+.footer {
+	@include bigtext(1.25em);
+	text-align: center;
+	color: white;
+	margin-top: 2.25em;
+
+	a {
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px solid white;
+		padding: 0;
+		
+		&:hover {
+			text-shadow: #aaaaaa 0px 1px 2px;		
+		}
+	}
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 }
 
 .loader {

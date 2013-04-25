@@ -1,8 +1,12 @@
 $(document).ready(function() {
 
+<<<<<<< HEAD
 	var tmdb_apikey = "78ce6d1fe61708beb0815b4772f4be3e";
 	
 	var randomGenres = [28,12,16,35,80,99,18,10751,14,10769,36,27,10756,10402,9648,10749,878,53,10752,37];
+=======
+	var tmdb_apikey = "YOUR_API_KEY_HERE";
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 	var genre, genreText, movie;
 
@@ -13,6 +17,7 @@ $(document).ready(function() {
 	buttons.click(function() {
 
 		// Add genre to searchbox on click
+<<<<<<< HEAD
 	//	$(".searchbox").attr("value", $(this).attr("value"));
 
 		// Grabs the buttons "name" attribute which has been given the value of its genre Id
@@ -37,6 +42,13 @@ $(document).ready(function() {
 		genreText = $(this).attr("value").toLowerCase();
 		
 		a();
+=======
+		$(".searchbox").attr("value", $(this).attr("value"));
+
+		// Grabs the buttons "name" attribute which has been given the value of its genre Id
+		genre = $(this).attr("name");
+		genreText = $(this).attr("value").toLowerCase();
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 	});
 
@@ -44,16 +56,25 @@ $(document).ready(function() {
 	$('.try-again').click(function() {
 
 		$(".result").fadeOut('slow', function() {
+<<<<<<< HEAD
 			$(".tags").fadeIn();
+=======
+			$(".content").fadeIn();
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 		});
 
 		$(".movie-trailer").html("");
 		$(".searchbox").attr("value", "");
 		$(".overview").html("");
+<<<<<<< HEAD
 		$(".headline").html("Find Me a Movie");
 		genreText = undefined;
 		//$("body").css("background", "url('images/background.jpg')");
 	//	$("body").css("background", "url('images/billie_holiday.png')");
+=======
+		genreText = undefined;
+		$("body").css("background", "url('images/background.jpg')");
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 	});
 
@@ -69,13 +90,18 @@ $(document).ready(function() {
 
 			return movie;
 
+<<<<<<< HEAD
 	};
+=======
+		};
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 	// Populates the page with the results from the random movie search
 	var updatePage = function(movie) {
 
 			var url = "http://api.themoviedb.org/3/movie/" + movie.id;
 
+<<<<<<< HEAD
 		//	$(".title").html(movie.title);
 		
 		$(".headline").html(movie.title);
@@ -85,6 +111,13 @@ $(document).ready(function() {
 		//	$("body").css("background", "url('http://cf2.imgobject.com/t/p/original" + movie.backdrop_path + "')");
 			$(".rt-score").html();
 			$(".release-date").html("Released: " + movie.release_date + " <span class='red'>-</span> ");
+=======
+			$(".title").html(movie.title);
+			$(".movie-poster").attr("src", "http://cf2.imgobject.com/t/p/original/" + movie.poster_path);
+			$("body").css("background", "url('http://cf2.imgobject.com/t/p/original" + movie.backdrop_path + "')");
+			$(".rt-score").html();
+			$(".release-date").html("Released: " + movie.release_date + " | ");
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 			$(".poster-link").attr("href", "http://www.themoviedb.org/movie/" + movie.id);
 			$(".genre").html(genreText);
 
@@ -102,11 +135,20 @@ $(document).ready(function() {
 
 			getTrailer(url);
 
+<<<<<<< HEAD
 			$(".tags").fadeOut(function() {
 				$(".result").fadeIn();
 			});
 
 	};
+=======
+			$(".content").fadeOut(function() {
+				$(".result").fadeIn();
+			});
+
+
+		};
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 
 	var getTrailer = function(url) {
@@ -123,7 +165,11 @@ $(document).ready(function() {
 				}
 			});
 
+<<<<<<< HEAD
 	};
+=======
+		};
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 	// Goes through a page of movie objects and appends them one by one to an array 'movielist'
 	var addMoviesToList = function(url, pageNumber, dataLength, movielist) {
@@ -147,7 +193,11 @@ $(document).ready(function() {
 		};
 
 	// Connects to themoviedb.org's database and stores all the movies in the selected genre in an array
+<<<<<<< HEAD
 /*	$(".searchbutton").click(function() {
+=======
+	$(".searchbutton").click(function() {
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 		// If the user has selected a genre
 		if (genreText !== undefined) {
@@ -187,6 +237,7 @@ $(document).ready(function() {
 			});
 		}
 
+<<<<<<< HEAD
 	});*/
 	
 	var a = function() {
@@ -220,5 +271,8 @@ $(document).ready(function() {
 
 	};
 	
+=======
+	});
+>>>>>>> 48219964ea6ec676768a43fd488f17cd56681585
 
 });
