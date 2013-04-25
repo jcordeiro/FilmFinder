@@ -7,6 +7,6 @@ To learn more you can visit the site [here](http://filmfinder.joncordeiro.com), 
 
 Bored and feel like watching a movie, but you don't know what to watch? Simply select a genre and let FilmFinder do all the work!
 
-This site makes use of SASS/SCSS rather than CSS and also uses the [Bourbon](http://bourbon.io) library of SASS mixins. Make sure to place the Bourbon folder in the stylesheets folder.
+I used SASS/SCSS to produce the stylesheet and made use of the [Bourbon](http://bourbon.io) library of SASS mixins. I've placed the CSS folder in the git repository to make it easier to run the code yourself, so there are no dependancies on Bourbon or SASS/SCSS.
 
-In order to run this code yourself you will also need to sign up for an account at [themoviedb.org](https://www.themoviedb.org/account/signup) and get an [API key](http://docs.themoviedb.apiary.io/). Place the API key at the top of [main.js](https://github.com/jcordeiro/FilmFinder/blob/master/scripts/main.js) and you're good to go.
+To run this code yourself you will also need to sign up for an account at [themoviedb.org](https://www.themoviedb.org/account/signup) and get an [API key](http://docs.themoviedb.apiary.io/). Place the API key at the top of [main.js](https://github.com/jcordeiro/FilmFinder/blob/master/scripts/main.js) and you're good to go.
