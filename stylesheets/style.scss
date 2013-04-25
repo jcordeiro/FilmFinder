@@ -1,0 +1,288 @@
+@import 'bourbon/bourbon';
+
+$button-color: #DE341D;
+$text-color: #ffffff;
+$font-size: 2.25em;
+
+@mixin buttonstyles ($button-color, $text-color) {
+	@include button($button-color);
+	color: $text-color;
+	font-size: 1.25em;
+	margin: 5px;
+	padding: 10px;
+}
+
+@mixin bigtext($font-size) {
+	font-size: $font-size;
+	color: white;
+	text-shadow: 0 0 0.2em #000000, 0 0 0.2em #000000;
+	text-align: center;	
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+
+	background: url("../images/billie_holiday.png");
+	
+	overflow-y: scroll;
+	overflow: -moz-scrollbars-vertical;
+
+	
+//background: yellow;
+	
+}
+
+.content {	
+	margin: 0.5em auto;
+	margin-bottom: -3em	;
+	padding-bottom: 0;
+	width: 75%;
+	height: 90%;
+	
+//	background: orange;
+}
+
+.header {
+	@include bigtext($font-size + 0.25em);
+	
+	
+	.error-missing {
+		position: absolute;
+		left: 15%;
+		right: 15%;
+		top: 30%;
+		font-size: 2.25em;
+		color: $text-color;
+		text-decoration: none;
+		border-bottom: 2px solid $text-color;
+
+			&:hover {
+				border-bottom: 2px solid #333333;
+				text-shadow: #555555 0px 1px 2px;	
+			}
+	}
+	
+	.headline {
+			border-bottom: 2px groove #DE341D;
+			
+			margin-top: 0.5em;
+			
+		//	float: left;
+		
+		//background: blue;
+	}
+	
+
+	padding: 0;
+	margin: 0;
+	
+//background: red;
+}
+
+.pick-genre {
+	position: inline-block;
+	@include clearfix;
+	border: 1px solid black;
+//	background: orange;
+}
+
+.select-genre-p {
+	margin: -0.5em auto;
+}
+
+#random-button {
+	width: 22em;
+	margin: -0.5em auto;
+}
+
+#again-button {
+	@include buttonstyles($button-color, $text-color);
+	font-size: golden-ratio(10px,  1);
+	width: 22em;
+}
+
+.result {
+	@include clearfix;
+	@include bigtext(1.5);
+	
+	width: 75%;
+	
+
+	margin: auto;
+	margin-bottom: -3em;
+
+	.movie-poster {
+		width: 300px;
+		height: 450px;
+		float: left;
+		padding: 0;
+		border: 1px solid white;
+		@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+		margin: 0.5em 1em;
+
+	}
+	
+	
+	.movie-info {
+		text-align: left;
+		padding: 0 1em;
+		line-height: 2em;
+	//	margin: -0.5em 5em 0.5em 1em;
+	//	margin-right: 5em;
+		margin-top: 0.35em;
+		margin-right: 5em;
+				margin-left: 1em;
+		display: inline;
+		font-size: golden-ratio(16px, 1);
+		border-bottom: 2px groove #DE341D;
+		
+		.red {
+			color: #DE341D;
+		}
+		
+	//	float: right;
+		
+		li {
+			list-style-type: none;
+			display: inline;
+		}
+		
+	//	background: purple;
+	}
+	
+	.overview {
+
+		height: 7.75em;
+		text-align: left;
+		font-size: golden-ratio(12px, 1);
+		margin-left: 19em;
+		margin-top: 18em;
+		padding: 5px;
+		
+		border-top: 2px groove #DE341D;
+	//	border-bottom: 2px groove #DE341D;
+		
+	//	margin-right: -0.25em;
+/*	/	margin-top: 2.5em;*/
+	//	margin: 0.5em 5em 0.5em 15em;
+	//	padding-left: 0;
+	
+//	display: inline-block;
+	
+/*	/	float: right;*/
+		
+//		background: orange;
+	}
+	
+	.movie-trailer {
+		float: right;
+		
+	//	margin-top: -3.5em;
+	margin-top: 0;
+		margin-right: 0.5em;
+
+
+
+	}
+	
+	
+//	background: blue;
+}
+
+.result-container {
+			@include clearfix;
+//	background: red;
+}
+
+.try-again {	
+	@include buttonstyles($text-color, black);
+	margin-left: 0em;
+	float: left;
+	width: 40%;
+}
+
+.searchtag-wrapper {
+	margin: auto;	
+}
+
+.search {
+	text-align: center;
+	
+	.searchbutton {
+		@include buttonstyles($button-color, $text-color);
+		width: 12em;
+		padding: 10px;
+	}
+	
+	.searchbox {
+		width: 70%;
+		font-size: golden-ratio(14px, 1);
+		padding: 10px;
+	}
+}
+
+.tags {
+	text-align: center;
+	
+	.tag-button {
+		@include buttonstyles($button-color, $text-color);
+		font-size: golden-ratio(10px,  1);
+		width: 10em;
+
+	}
+	
+	p {
+		@include bigtext($font-size);
+	}
+}
+
+
+
+.footer {
+	font-size: 1.25em;
+
+	width: 75%;
+	text-align: center;
+	color: black;
+	margin: 4.25em auto 0.25em auto;
+	padding: 5px;
+	border-top: 2px groove #DE341D;
+//	border-bottom: 2px groove #DE341D;
+
+	a {
+		color: black;
+		text-decoration: none;
+		border-bottom: 1px dashed #DE341D;
+		padding: 0;
+		
+		&:hover {
+		//	font-weight: bold;
+			text-shadow: #aaaaaa 0px 1px 2px;		
+		}
+	} 
+	
+//	background: green;
+}
+
+.loader {
+	position: absolute;
+	top: 45%;
+	bottom:45%;
+	left: 48%;
+	right: 48%;
+	height: 200px;
+	width: 300px;
+}
+
+.error {
+	border: 1px solid white;
+	background: #aa0000;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+
+.hidden {
+	display: none;
+}
