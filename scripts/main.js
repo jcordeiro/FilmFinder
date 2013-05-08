@@ -15,18 +15,18 @@ $(document).ready(function() {
 
 		// Grabs the buttons "name" attribute which has been given the value of its genre Id
 		
-		console.log($(this).attr("name"));
-		
 		if ($(this).attr("name") != "random") {
 			genre = $(this).attr("name");
 		} else {
-			genre = randomGenres[Math.floor(Math.random() * randomGenres.length)];
+			genre = randomGenres[Math.floor(Math.random() * randomGenres.length)]; // Random picks a genre
 					console.log(genre);
 		}
 	
 		genreText = $(this).attr("value").toLowerCase();
 		
 		getResults();
+		
+		sendStats();
 
 	});
 
@@ -156,16 +156,54 @@ $(document).ready(function() {
 				}
 
 			});
+			
+			// Pick a random page of results
+			 var randomPage = Math.floor(Math.random() * nbrOfPages);
+			
 
-			// Iterate over each page and add the results
-			for (var i = 1; i <= nbrOfPages; i++) {
-				addMoviesToList(url, i, dataLength, movielist);
-			}
+			// Add the results from the randomly chosen page to an array
+			addMoviesToList(url, randomPage, dataLength, movielist);
+
 
 			movie = pickRandomMovie(movielist);
 			updatePage(movie);
 
 	};
+	
+	
+	// Send information about films that are found to server side php script for statistics collection
+	var sendStats = function() {
+		
+		// Get date and time
+		var d = new Date();
+		
+		var currentTime = d.getHours() + ":" 
+						+ d.getMinutes() + ":"
+						+ d.getSeconds();
+		
+		var currentDate = (d.getMonth()+1) + "/"
+		                + (d.getDate()+1)  + "/" 
+		                + d.getFullYear();
+
+		
+		$.ajax({
+	        type: "POST",
+	        url: "../monitor/monitor.php",
+	       // data: "filmTitle=" + movie.title + "\u0026genre=" + genreText + "\u0026time=" + currentTime + "\u0026date" + currentDate,
+			data: {
+			    title: movie.title,
+				genre: genreText,
+				time: currentTime,
+				date: currentDate
+			},
+	
+	        success: function(){
+				console.log("Stats sent successfully");
+	    	} 
+		
+		}); 
+		
+   	};
 	
 
 });
