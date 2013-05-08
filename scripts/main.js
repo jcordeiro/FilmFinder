@@ -12,7 +12,6 @@ $(document).ready(function() {
 	// Assign all the genre tag buttons event handlers
 	buttons.click(function() {
 
-
 		// Grabs the buttons "name" attribute which has been given the value of its genre Id
 		
 		if ($(this).attr("name") != "random") {
@@ -42,8 +41,6 @@ $(document).ready(function() {
 		$(".overview").html("");
 		$(".headline").html("Find Me a Movie");
 		genreText = undefined;
-		//$("body").css("background", "url('images/background.jpg')");
-	//	$("body").css("background", "url('images/billie_holiday.png')");
 
 	});
 
@@ -64,15 +61,12 @@ $(document).ready(function() {
 	// Populates the page with the results from the random movie search
 	var updatePage = function(movie) {
 
-			var url = "http://api.themoviedb.org/3/movie/" + movie.id;
-
-		//	$(".title").html(movie.title);
+		var url = "http://api.themoviedb.org/3/movie/" + movie.id;
 		
 		$(".headline").html(movie.title);
 			
 			
 			$(".movie-poster").attr("src", "http://cf2.imgobject.com/t/p/original/" + movie.poster_path);
-		//	$("body").css("background", "url('http://cf2.imgobject.com/t/p/original" + movie.backdrop_path + "')");
 			$(".rt-score").html();
 			$(".release-date").html("Released: " + movie.release_date + " <span class='red'>-</span> ");
 			$(".poster-link").attr("href", "http://www.themoviedb.org/movie/" + movie.id);
@@ -86,7 +80,14 @@ $(document).ready(function() {
 				dataType: 'json',
 				success: function(data) {
 					$(".running-time").html("Run time: " + data.runtime + " minutes");
-					$(".overview").append(data.overview);
+					
+					var overview = data.overview;
+					
+					if (overview.length > 550 ) {
+						overview = overview.substring(0,550) + "...";
+					}
+
+					$(".overview").append(overview);
 				}
 			});
 
@@ -182,7 +183,7 @@ $(document).ready(function() {
 						+ d.getSeconds();
 		
 		var currentDate = (d.getMonth()+1) + "/"
-		                + (d.getDate()+1)  + "/" 
+		                + (d.getDate())  + "/" 
 		                + d.getFullYear();
 
 		
